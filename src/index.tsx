@@ -6,16 +6,28 @@ import Home from './Home';
 import NavTabs from './components/NavigationBar';
 import Footer from './components/Footer';
 
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+
+const Wrapper = styled(Box)({
+  height: '100vh',
+  display: 'flex', 
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+})
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <Router>
-    <NavTabs />
-    <Routes>
-      <Route path='/' element={<Home />} />
-    </Routes>
-    <Footer />
+    <Wrapper>
+      <NavTabs />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+      <Footer />
+    </Wrapper>
   </Router>
 );
 

@@ -4,9 +4,6 @@ import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import {
-  MemoryRouter,
-  Route,
-  Routes,
   Link,
   matchPath,
   useLocation,
@@ -40,14 +37,8 @@ function useRouteMatch(patterns: readonly string[]) {
 }
 
 export default function NavTabs() {
-  const [value, setValue] = React.useState(0);
   const routeMatch = useRouteMatch(['/', '/projects', '/contact']);
   const currentTab = routeMatch?.pattern?.path;
-  
-
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
 
   return (
     <StyledBox>
