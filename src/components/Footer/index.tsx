@@ -11,7 +11,7 @@ const StyledBox = styled(Box)({
   display: 'flex',
   justifyContent: 'center',
   color: 'red',
-  marginBottom: '10px',
+  margin: '10px 0px',
 });
 
 const StyledLinkedIn = styled(LinkedIn)({
