@@ -46,7 +46,6 @@ export default function NavTabs() {
   
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    // navigate(`/${href}`)
     setValue(newValue);
   };
 

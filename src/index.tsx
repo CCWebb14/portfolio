@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.css';
 import Home from './Home';
 import NavTabs from './components/NavigationBar';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,6 +15,7 @@ root.render(
     <Routes>
       <Route path='/' element={<Home />} />
     </Routes>
+    <Footer />
   </Router>
 );
 
