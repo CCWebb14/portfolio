@@ -3,21 +3,16 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import {
-  Link,
-  matchPath,
-  useLocation,
-} from 'react-router-dom';
+import { Link, matchPath, useLocation } from 'react-router-dom';
 import CodeIcon from '@mui/icons-material/Code';
-import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
 
 const StyledBox = styled(Box)({
-  display: 'flex', 
+  display: 'flex',
   justifyContent: 'center',
   alignItems: 'space-between',
   borderBottom: '1px solid #e8e8e8',
-  marginTop: '10px'
-})
+  marginTop: '10px',
+});
 
 function useRouteMatch(patterns: readonly string[]) {
   const { pathname } = useLocation();
@@ -40,10 +35,15 @@ export default function NavTabs() {
   return (
     <StyledBox>
       <Tabs value={currentTab}>
-        <Tab label="Home" value="/" to='/' component={Link}/>
-        <Tab label="Projects" value="/projects" to='/projects' component={Link}/>
-        <Tab label="Contact" value="/contact" to='/contact' component={Link}/>
-        <Tab icon={<CodeIcon />}  href='https://github.com/CCWebb14/portfolio'/>
+        <Tab label="Home" value="/" to="/" component={Link} />
+        <Tab
+          label="Projects"
+          value="/projects"
+          to="/projects"
+          component={Link}
+        />
+        <Tab label="Contact" value="/contact" to="/contact" component={Link} />
+        <Tab icon={<CodeIcon />} href="https://github.com/CCWebb14/portfolio" />
       </Tabs>
     </StyledBox>
   );

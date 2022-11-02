@@ -1,20 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import Home from './components/Home';
-import NavTabs from './components/NavigationBar';
-import Footer from './components/Footer';
-
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+import NavTabs from './components/NavigationBar';
+import Home from './components/Home';
+import Footer from './components/Footer';
 
 const Wrapper = styled(Box)({
   height: '100vh',
-  display: 'flex', 
+  display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-})
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -24,7 +23,7 @@ root.render(
     <Wrapper>
       <NavTabs />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
     </Wrapper>
