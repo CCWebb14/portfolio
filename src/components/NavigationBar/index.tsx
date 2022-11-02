@@ -8,6 +8,7 @@ import {
   matchPath,
   useLocation,
 } from 'react-router-dom';
+import CodeIcon from '@mui/icons-material/Code';
 
 const StyledBox = styled(Box)({
   display: 'flex', 
@@ -46,6 +47,7 @@ export default function NavTabs() {
         <Tab label="Home" value="/" to='/' component={Link}/>
         <Tab label="Projects" value="/projects" to='/projects' component={Link}/>
         <Tab label="Contact" value="/contact" to='/contact' component={Link}/>
+        <Tab label="< >" href='https://github.com/CCWebb14/portfolio'/>
       </StyledTabs>
     </StyledBox>
   );
