@@ -9,20 +9,15 @@ import {
   useLocation,
 } from 'react-router-dom';
 import CodeIcon from '@mui/icons-material/Code';
+import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
 
 const StyledBox = styled(Box)({
   display: 'flex', 
-  'justify-content': 'center',
-  'align-items': 'space-between',
+  justifyContent: 'center',
+  alignItems: 'space-between',
   borderBottom: '1px solid #e8e8e8',
   marginTop: '10px'
 })
-
-const StyledTabs = styled(Tabs)({
-  '& .MuiTabs-indicator': {
-    backgroundColor: '#1890ff',
-  },
-});
 
 function useRouteMatch(patterns: readonly string[]) {
   const { pathname } = useLocation();
@@ -44,12 +39,12 @@ export default function NavTabs() {
 
   return (
     <StyledBox>
-      <StyledTabs value={currentTab}>
+      <Tabs value={currentTab}>
         <Tab label="Home" value="/" to='/' component={Link}/>
         <Tab label="Projects" value="/projects" to='/projects' component={Link}/>
         <Tab label="Contact" value="/contact" to='/contact' component={Link}/>
-        <Tab label="< >" href='https://github.com/CCWebb14/portfolio'/>
-      </StyledTabs>
+        <Tab icon={<CodeIcon />}  href='https://github.com/CCWebb14/portfolio'/>
+      </Tabs>
     </StyledBox>
   );
 }
