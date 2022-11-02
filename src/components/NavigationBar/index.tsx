@@ -15,6 +15,7 @@ const StyledBox = styled(Box)({
   'justify-content': 'center',
   'align-items': 'space-between',
   borderBottom: '1px solid #e8e8e8',
+  marginTop: '10px'
 })
 
 const StyledTabs = styled(Tabs)({
