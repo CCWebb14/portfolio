@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import NavTabs from './components/NavigationBar';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import Projects from './components/Projects';
 
 const Wrapper = styled(Box)({
   height: '100vh',
@@ -24,6 +25,7 @@ root.render(
       <NavTabs />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Projects" element={<Projects />} />
       </Routes>
       <Footer />
     </Wrapper>
