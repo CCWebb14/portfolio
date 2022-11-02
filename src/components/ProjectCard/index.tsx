@@ -12,14 +12,21 @@ type Entry = {
   imageLink?: string;
   title: string;
   body: string;
+  testLink: string;
+  codeLink: string;
 };
 
-const ProjectCard = ({ imageLink, title, body }: Entry) => (
+const ProjectCard = ({ imageLink, title, body, testLink, codeLink }: Entry) => (
   <>
-    <Card sx={{ maxWidth: 345 }}>
+    <Card
+      sx={{
+        minWidth: 345,
+        maxHeight: 500,
+      }}
+    >
       <CardMedia
         component="img"
-        height="140"
+        height="200"
         image={imageLink}
         alt="no image available"
       />
@@ -32,10 +39,22 @@ const ProjectCard = ({ imageLink, title, body }: Entry) => (
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" endIcon={<PlayArrowIcon />}>
+        <Button
+          size="small"
+          href={testLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          endIcon={<PlayArrowIcon />}
+        >
           Test
         </Button>
-        <Button size="small" endIcon={<CodeIcon />}>
+        <Button
+          size="small"
+          href={codeLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          endIcon={<CodeIcon />}
+        >
           Code
         </Button>
       </CardActions>

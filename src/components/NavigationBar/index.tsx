@@ -43,7 +43,12 @@ export default function NavTabs() {
           component={Link}
         />
         <Tab label="Contact" value="/contact" to="/contact" component={Link} />
-        <Tab icon={<CodeIcon />} href="https://github.com/CCWebb14/portfolio" />
+        <Tab
+          icon={<CodeIcon />}
+          href="https://github.com/CCWebb14/portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
       </Tabs>
     </StyledBox>
   );

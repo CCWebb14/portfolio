@@ -8,6 +8,7 @@ import NavTabs from './components/NavigationBar';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 const Wrapper = styled(Box)({
   height: '100vh',
@@ -26,6 +27,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Projects" element={<Projects />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Wrapper>
