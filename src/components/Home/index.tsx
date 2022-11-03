@@ -22,18 +22,23 @@ function Home() {
   return (
     <StyledBox>
       <Typography
-        sx={{ fontSize: 60 }}
+        sx={{
+          fontSize: 60,
+          marginTop: '5vh',
+          '@media(max-width: 480px)': { fontSize: 40 },
+        }}
         color="white"
         fontFamily="Montserrat"
         fontWeight="500"
-        marginTop="100px"
       >
         {"Hi, I'm Cooper"}
       </Typography>
       <Typography
-        sx={{ fontSize: 30 }}
+        sx={{
+          marginBottom: '2vh',
+          fontSize: 30,
+        }}
         color="#0ad43c"
-        marginBottom="20px"
         fontFamily="Montserrat"
         fontWeight="300"
       >

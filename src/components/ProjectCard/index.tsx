@@ -17,49 +17,48 @@ type Entry = {
 };
 
 const ProjectCard = ({ imageLink, title, body, testLink, codeLink }: Entry) => (
-  <>
-    <Card
-      sx={{
-        minWidth: 345,
-        maxHeight: 500,
-      }}
-    >
-      <CardMedia
-        component="img"
-        height="200"
-        image={imageLink}
-        alt="no image available"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {title}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {body}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button
-          size="small"
-          href={testLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          endIcon={<PlayArrowIcon />}
-        >
-          Test
-        </Button>
-        <Button
-          size="small"
-          href={codeLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          endIcon={<CodeIcon />}
-        >
-          Code
-        </Button>
-      </CardActions>
-    </Card>
-  </>
+  <Card
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100%',
+    }}
+  >
+    <CardMedia
+      component="img"
+      height="200"
+      image={imageLink}
+      alt="no image available"
+    />
+    <CardContent sx={{ flexGrow: '1' }}>
+      <Typography gutterBottom variant="h5" component="div">
+        {title}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">
+        {body}
+      </Typography>
+    </CardContent>
+    <CardActions>
+      <Button
+        size="small"
+        href={testLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        endIcon={<PlayArrowIcon />}
+      >
+        Test
+      </Button>
+      <Button
+        size="small"
+        href={codeLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        endIcon={<CodeIcon />}
+      >
+        Code
+      </Button>
+    </CardActions>
+  </Card>
 );
 
 export default ProjectCard;

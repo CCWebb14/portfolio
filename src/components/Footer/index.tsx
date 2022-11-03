@@ -8,18 +8,33 @@ import { LinkedIn, GitHub, Email } from '@mui/icons-material';
 const StyledBox = styled(Box)({
   display: 'flex',
   justifyContent: 'center',
-  color: 'red',
-  margin: '10px 0px',
+  alignItems: 'center',
+  padding: '5px 0px',
+  borderTop: '1px solid #e8e8e8',
+  // for sticky footer implementation
+  // backgroundColor: 'white',
+  // position: 'fixed',
+  // bottom: 0,
+  // left: 0,
+  // width: '100%',
 });
 
 const Footer = () => {
   return (
     <StyledBox>
       <Stack direction="row" spacing={5}>
-        <IconButton href="https://www.linkedin.com/in/cooper-webb-25b991255">
+        <IconButton
+          href="https://www.linkedin.com/in/cooper-webb-25b991255"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <LinkedIn />
         </IconButton>
-        <IconButton href="https://github.com/CCWebb14">
+        <IconButton
+          href="https://github.com/CCWebb14"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <GitHub />
         </IconButton>
         <IconButton href="mailto:CCWebb14@gmail.com">
