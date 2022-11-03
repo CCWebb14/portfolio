@@ -5,6 +5,16 @@ import Typography from '@mui/material/Typography';
 import background from './backgroundPhoto.jpg';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import { keyframes } from '@mui/system';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 const StyledBox = styled(Box)({
   display: 'flex',
@@ -16,6 +26,7 @@ const StyledBox = styled(Box)({
   width: '100%',
   backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat',
+  animation: `${fadeIn} 1s`,
 });
 
 function Home() {
