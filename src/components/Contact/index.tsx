@@ -2,12 +2,16 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
 import Card from '@mui/material/Card';
+import { LinkedIn, GitHub, Email } from '@mui/icons-material';
+import IconButton from '@mui/material/IconButton';
+
 
 const Contact = () => (
   <>
     <Box
       sx={{
         display: 'flex',
+        flexDirection: 'column',
         flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
@@ -22,12 +26,13 @@ const Contact = () => (
           height: 200,
         }}
       >
-        <Typography>
+        <Typography >
           Cooper Webb <br />
           Victoria, B.C.
           <br />
           CCWebb14@gmail.com
         </Typography>
+
       </Card>
     </Box>
   </>
