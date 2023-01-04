@@ -42,7 +42,7 @@ const Projects = () => (
              When a user is signed in they can create posts or reply to others by clicking
              on a comment. This service is run on an AWS EC2 server with an SQLite database. This project
              is still very early in development. Please use these credentials {user:DemoUser password:mpDP6E6idvonjVI3}"
-            testLink="http://forum.cooptech.io"
+            testLink="http://forum.cooperwebb.xyz"
             codeLink="https://github.com/CCWebb14/django-react-forum"
           />
         </Grid>
