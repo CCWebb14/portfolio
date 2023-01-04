@@ -26,7 +26,7 @@ const StyledBox = styled(Box)({
   width: '100%',
   backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat',
-  animation: `${fadeIn} 2s`,
+  animation: `${fadeIn} 5s`,
 });
 
 function Home() {
