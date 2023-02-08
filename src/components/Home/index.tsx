@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -6,6 +6,7 @@ import background from './backgroundPhoto.jpg';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { keyframes } from '@mui/system';
+import { Skeleton } from '@mui/material';
 
 const fadeIn = keyframes`
   from {
@@ -26,45 +27,59 @@ const StyledBox = styled(Box)({
   width: '100%',
   backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat',
-  animation: `${fadeIn} 5s`,
+  animation: `${fadeIn} 4s`,
 });
 
 function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const image = new Image();
+    image.src = background;
+    image.onload = () => {
+      setLoading(false);
+    };
+  }, []);
+
   return (
     <Box sx={{ flexGrow: '1', background: '#000000' }}>
-      <StyledBox>
-        <Typography
-          sx={{
-            fontSize: 60,
-            marginTop: '5vh',
-            '@media(max-width: 480px)': { fontSize: 40 },
-          }}
-          color="white"
-          fontFamily="Montserrat"
-          fontWeight="500"
-        >
-          {"Hi, I'm Cooper"}
-        </Typography>
-        <Typography
-          sx={{
-            marginBottom: '2vh',
-            fontSize: 30,
-          }}
-          color="#0ad43c"
-          fontFamily="Montserrat"
-          fontWeight="300"
-        >
-          {'a web developer'}
-        </Typography>
-        <Button
-          variant="outlined"
-          color="success"
-          to="/projects"
-          component={Link}
-        >
-          {"Come see what I've been working on"}
-        </Button>
-      </StyledBox>
+      {loading ? (
+        <Skeleton variant="rectangular" animation="wave" height="100%" />
+      ) : (
+        <StyledBox>
+          <Typography
+            sx={{
+              fontSize: 60,
+              marginTop: '5vh',
+              '@media(max-width: 480px)': { fontSize: 40 },
+            }}
+            color="white"
+            fontFamily="Montserrat"
+            fontWeight="500"
+          >
+            {"Hi, I'm Cooper"}
+          </Typography>
+          <Typography
+            sx={{
+              marginBottom: '2vh',
+              fontSize: 30,
+            }}
+            color="#0ad43c"
+            fontFamily="Montserrat"
+            fontWeight="300"
+          >
+            {'a web developer'}
+          </Typography>
+          <Button
+            variant="outlined"
+            color="success"
+            to="/projects"
+            component={Link}
+          >
+            {"Come see what I've been working on"}
+          </Button>
+        </StyledBox>
+      )}
     </Box>
   );
 }
