@@ -9,13 +9,10 @@ import array_thumbnail from './images/array_game.png';
 import RPS_thumbnail from './images/rock_paper_scissors.png';
 import landing_page_thumbnail from './images/landing_page.png';
 
-const Projects = () => (
-  <>
+export const Projects = () => {
+  return (
     <Box
       sx={{
-        flexGrow: 1,
-        display: 'flex',
-        justifyContent: 'center',
         margin: 5,
       }}
     >
@@ -105,7 +102,7 @@ const Projects = () => (
         </Grid>
       </Grid>
     </Box>
-  </>
-);
+  );
+};
 
 export default Projects;
