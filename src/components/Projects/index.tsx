@@ -23,7 +23,7 @@ export const Projects = () => {
             title="Portfolio"
             body="This portfolio website was developed in react with the material-ui library.
              It is currently running on an AWS EC2 nginx web-server."
-            testLink="https://cooptech.io"
+            testLink="https://cooperwebb.xyz"
             codeLink="https://github.com/CCWebb14/portfolio"
           />
         </Grid>
@@ -93,7 +93,7 @@ export const Projects = () => {
           <ProjectCard
             imageLink={landing_page_thumbnail}
             title="Landing Page"
-            body="A mockup html and css webpage. The was built to better understand
+            body="A mockup html and css webpage. This was built to better understand
              css properties such as flexbox. 
              Built for the Odin Projects curriculum."
             testLink="https://ccwebb14.github.io/Landing-Page/"
