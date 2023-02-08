@@ -8,6 +8,16 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import CodeIcon from '@mui/icons-material/Code';
 import Typography from '@mui/material/Typography';
 import { Skeleton } from '@mui/material';
+import { keyframes } from '@mui/system';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 type Entry = {
   imageLink: string;
@@ -44,6 +54,7 @@ const ProjectCard = ({ imageLink, title, body, testLink, codeLink }: Entry) => {
           height="200"
           image={imageLink}
           alt="no image available"
+          sx={{ animation: `${fadeIn} 0.5s` }}
         />
       )}
       <CardContent sx={{ flexGrow: '1' }}>
